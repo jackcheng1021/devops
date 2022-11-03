@@ -3,7 +3,7 @@ devops platform
 
 1.基于基础云的devops平台包括
 - 云平台即代码: saltstack, openstack脚本（openstack脚本详见liberty_openstack仓库：https://github.com/jackcheng1021/liberty_openstack）
-- 基础设施即代码: saltstack
+- 系统配置即代码: saltstack
 - 物理主机即代码: cobbler
 - 代码托管与共享: 云主机, git, github
 - 生产环境即代码: 云主机, docker
