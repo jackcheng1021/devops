@@ -10,3 +10,23 @@
 - 产品部署即代码: 云主机, docker, kubernetes
 - 性能监控即代码: saltstack, zabbix
 ![image](https://github.com/jackcheng1021/devops/blob/master/img/devops-architecture-image.png)
+
+2.安装和配置
+- 环境准备
+  - 三台安装CentOS7操作系统的虚拟机
+  - 在同一网段
+  - 三台主机名分别为: controller compute01 compute02
+- 关闭三台主机的SELINUX模块
+```
+//分别在三台主机执行如下命令
+sed -i 's#^SELINUX=.*#SELINUX=disabled#g' /etc/selinux/config
+reboot
+```
+- 安装
+ - 将该项目下载到 controller 节点的 root 目录下
+ - 进入目录 `cd /root/devops/`
+```
+//执行如下命令
+chmod +x devops-platform-install.sh
+./devops-platform-install.sh
+```
