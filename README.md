@@ -1,10 +1,5 @@
 # devops
 
-devops platform
-pleae switch to the master branch https://github.com/jackcheng1021/devops/tree/master
-
-devops platform
-
 1.基于基础云的devops平台包括
 - 云平台即代码: saltstack, openstack脚本（openstack脚本详见liberty_openstack仓库：https://github.com/jackcheng1021/liberty_openstack）
 - 系统配置即代码: saltstack
