@@ -10,4 +10,4 @@ devops platform
 - 产品测试即代码: 云主机, serverspec
 - 产品部署即代码: 云主机, docker, kubernetes
 - 性能监控即代码: saltstack, zabbix
-- [架构图]http://assets.processon.com/chart_image/635697eb1e08537e2ded67aa.png
+![image](http://assets.processon.com/chart_image/635697eb1e08537e2ded67aa.png)
