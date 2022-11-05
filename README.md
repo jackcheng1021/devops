@@ -23,8 +23,12 @@ sed -i 's#^SELINUX=.*#SELINUX=disabled#g' /etc/selinux/config
 reboot
 ```
 - 安装
- - 将该项目下载到 controller 节点的 root 目录下
- - 进入目录 `cd /root/devops/`
+  - 将该项目下载到 controller 节点的 root 目录下
+  - 进入目录 `cd /root/devops/`
+  - 下载 openstack 需要用的 tar 到 devops/liberty_openstack/ 目录
+    - liberty安装包
+    - 链接：https://pan.baidu.com/s/1ZkhNkJD4EC8y4pAvodEtDg 
+    - 提取码：kn34 
 ```
 //执行如下命令
 chmod +x devops-platform-install.sh
