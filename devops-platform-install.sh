@@ -90,7 +90,7 @@ spawn ssh -p 22 $compute01_user@$compute01_ip
 expect \"Password:\" 
 send \"${compute01_user_pass}\r\"
 expect \"${compute01_user}@*\"
-send \"liberty-nova-compute ${compute01_ip}\r\"
+send \"liberty-nova-compute\r\"
 expect \"${compute01_user}@*\"
 send \"exit\r\"
 expect eof
@@ -99,7 +99,7 @@ spawn ssh -p 22 $compute02_user@$compute02_ip
 expect \"Password:\" 
 send \"${compute02_user_pass}\r\"
 expect \"${compute02_user}@*\"
-send \"liberty-nova-compute ${compute02_ip}\r\"
+send \"liberty-nova-compute\r\"
 expect \"${compute02_user}@*\"
 send \"exit\r\"
 expect eof
@@ -110,7 +110,7 @@ spawn ssh -p 22 $compute01_user@$compute01_ip
 expect \"Password:\"
 send \"${compute01_user_pass}\r\"
 expect \"${compute01_user}@*\"
-send \"liberty-neutron-compute ${compute01_ip}\r\"
+send \"liberty-neutron-compute\r\"
 expect \"${compute01_user}@*\"
 send \"exit\r\"
 expect eof
@@ -119,7 +119,28 @@ spawn ssh -p 22 $compute02_user@$compute02_ip
 expect \"Password:\"
 send \"${compute02_user_pass}\r\"
 expect \"${compute02_user}@*\"
-send \"liberty-neutron-compute ${compute02_ip}\r\"
+send \"liberty-neutron-compute\r\"
+expect \"${compute02_user}@*\"
+send \"exit\r\"
+expect eof
+
+liberty-dashboard-controller
+liberty-cinder-controller
+    
+spawn ssh -p 22 $compute01_user@$compute01_ip
+expect \"Password:\"
+send \"${compute01_user_pass}\r\"
+expect \"${compute01_user}@*\"
+send \"liberty-cinder-compute\r\"
+expect \"${compute01_user}@*\"
+send \"exit\r\"
+expect eof
+    
+spawn ssh -p 22 $compute02_user@$compute02_ip
+expect \"Password:\"
+send \"${compute02_user_pass}\r\"
+expect \"${compute02_user}@*\"
+send \"liberty-cinder-compute\r\"
 expect \"${compute02_user}@*\"
 send \"exit\r\"
 expect eof
